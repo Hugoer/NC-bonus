@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
+import { Bonus } from './Bonus';
 
 function BonusList({ getBonusList, bonusList}) {
   const [items, setItems] = React.useState([]);
@@ -11,8 +12,7 @@ function BonusList({ getBonusList, bonusList}) {
   useEffect(()=>{
     const bonusItems = bonusList.map((bonus,idx) => (
       <div key={idx}>
-        <p>{bonus.from} - {bonus.to}: {bonus.amount}</p>
-        <span>{bonus.text}</span>
+        <Bonus bonus={bonus}/>
       </div>
       )
     );
