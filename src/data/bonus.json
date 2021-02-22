@@ -1,0 +1,39 @@
+[
+  {
+    "from" : 0,
+    "to" : 1,
+    "text" : "Great Job!",
+    "amount" : 5,
+    "hashtags" : [
+      "feedback",
+      "customer"
+    ]
+  },
+  {
+    "from" : 0,
+    "to" : 2,
+    "text" : "Awesome Job!",
+    "amount" : 10,
+    "hashtags" : [
+      "feedback"
+    ]
+  },
+  {
+    "from" : 1,
+    "to" : 0,
+    "text" : "Thanks for your help!",
+    "amount" : 7,
+    "hashtags" : [
+      "team"
+    ]
+  },
+  {
+    "from" : 2,
+    "to" : 0,
+    "text" : "Thanks a lot for your help!",
+    "amount" : 10,
+    "hashtags" : [
+      "team"
+    ]
+  }
+]
