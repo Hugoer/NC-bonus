@@ -4,7 +4,7 @@ import * as constants from './constants';
 export const initialState = {
   bonusList: [],
   bonusListLoading: false,
-  bonusListLoeaded: false,
+  bonusListLoaded: false,
   bonusListFailure: false,
 };
 
@@ -16,28 +16,26 @@ const BonusList = (state = initialState, action) =>
           ...draft,
           bonusList: [],
           bonusListLoading: false,
-          bonusListLoeaded: false,
+          bonusListLoaded: false,
           bonusListFailure: false,
         };
         break;
       case constants.GET_BONUS_LIST_SUCCESS:
-        draft = {
+        return draft = {
           ...draft,
           bonusList: action.payload,
           bonusListLoading: false,
           bonusListLoeaded: true,
           bonusListFailure: false,
         };
-        break;
-      case constants.GET_BONUS_LIST_SUCCESS:
-        draft = {
+      case constants.GET_BONUS_LIST_FAILURE:
+        return draft = {
           ...draft,
           bonusList: [],
           bonusListLoading: false,
           bonusListLoeaded: false,
           bonusListFailure: true,
         };
-        break;          
       default:
         break;
     }

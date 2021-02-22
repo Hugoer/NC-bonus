@@ -9,8 +9,12 @@ function BonusList({ getBonusList, bonusList}) {
   }, []);
 
   useEffect(()=>{
-    const bonusItems = bonusList.map(bonus => (
-      <p>`${bonus.from} - ${bonus.to}: ${bonus.amount}`</p>)
+    const bonusItems = bonusList.map((bonus,idx) => (
+      <div key={idx}>
+        <p>{bonus.from} - {bonus.to}: {bonus.amount}</p>
+        <span>{bonus.text}</span>
+      </div>
+      )
     );
     setItems(bonusItems);
   }, [bonusList]);

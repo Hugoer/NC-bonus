@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
-import { BonusList } from "./components/BonusList";
+import BonusList from "./components/BonusList";
 import { bonusListSelector } from "./meta/selectors";
+import { getBonusList } from './meta/actions';
 
 const matStateToProps = state => ({
   bonusList: bonusListSelector(state)

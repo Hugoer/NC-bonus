@@ -1,10 +1,12 @@
 import { default as users} from '../../data/users.json';
 import { default as hashtags } from '../../data/hashtag.json';
+import BonusListContainer from '../BonusList';
 
 function App() {
 
   return (
     <>
+      <BonusListContainer />
       <h1>
         Users: {users.length}
       </h1>
