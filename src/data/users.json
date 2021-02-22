@@ -1,0 +1,80 @@
+[
+  {
+    "id": 0,
+    "name" : "User 0",
+    "currentCoins" : 100,
+    "currentCoinsToRedeem" : 0,
+    "pastBonus" :[
+      {
+        "fromUser" : 1,
+        "nc" : 3
+      },
+      {
+        "fromUser" : 2,
+        "nc" : 97
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name" : "User 1",
+    "currentCoins" : 200,
+    "currentCoinsToRedeem" : 30,
+    "pastBonus" :[
+      {
+        "fromUser" : 0,
+        "nc" : 30
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name" : "User 2",
+    "currentCoins" : 300,
+    "currentCoinsToRedeem" : 45,
+    "pastBonus" :[
+      {
+        "fromUser" : 0,
+        "nc" : 45
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name" : "User 3",
+    "currentCoins" : 400,
+    "currentCoinsToRedeem" : 3456,
+    "pastBonus" :[
+      {
+        "fromUser" : 0,
+        "nc" : 3456
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name" : "User 4",
+    "currentCoins" : 100,
+    "currentCoinsToRedeem" : 0,
+    "pastBonus" : []
+  },
+  {
+    "id": 5,
+    "name" : "User 5",
+    "currentCoins" : 600,
+    "currentCoinsToRedeem" : 2134,
+    "pastBonus" :[
+      {
+        "fromUser" : 0,
+        "nc" : 2134
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name" : "User 6",
+    "currentCoins" : 100,
+    "currentCoinsToRedeem" : 0,
+    "pastBonus" : []
+  }
+]
