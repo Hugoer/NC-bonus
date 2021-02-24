@@ -1,0 +1,40 @@
+form {
+  border: 1px solid lightgray;
+  padding: 20px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+form label {
+  display: inline-block;
+  margin-top: 10px;
+  width: 100px;
+  vertical-align: top;
+}
+
+form label::before,
+form button::before {
+  content: "\A";
+}
+
+form button {
+  display: block;
+  margin-top: 30px;
+}
+
+form input,
+form select,
+form textarea {
+  display: inline-block;
+  width: 200px;
+  max-width: 200px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+form textarea {
+  min-height: 100px;
+}

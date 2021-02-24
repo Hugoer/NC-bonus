@@ -29,10 +29,10 @@ function BonusAdd(){
   return (
     <>
       <form onSubmit={onSubmit}>
+        
         <label htmlFor="description">Add bonus:</label>
         <input type="text" id="description" name="description" required
               minLength="4" size="10" value={bonus.description} onChange={set('description')}></input>
-          <input type="submit" value="Submit" />
 
         <label htmlFor="amount">Netcoins:</label>
         <input type="number" id="amount" name="amount" required
