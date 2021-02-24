@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { Bonus } from './Bonus';
-
+import bonusListStyles from './bonuslist.module.css';
+import BonusAdd from './BonusAdd';
 function BonusList({ getBonusList, bonusList}) {
   const [items, setItems] = React.useState([]);
 
@@ -11,17 +12,20 @@ function BonusList({ getBonusList, bonusList}) {
 
   useEffect(()=>{
     const bonusItems = bonusList.map((bonus,idx) => (
-      <div key={idx}>
-        <Bonus bonus={bonus}/>
-      </div>
+        <Bonus bonus={bonus} key={idx}/>
       )
     );
     setItems(bonusItems);
   }, [bonusList]);
 
-  return <div>
-    {items}
-  </div>;
+  return (
+    <>
+      <BonusAdd/>
+      <div className={bonusListStyles.bonuslist}>
+        {items}
+      </div>
+    </>
+  );
 
 }
 

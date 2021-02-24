@@ -11,8 +11,17 @@ function* getBonus() {
   }
 }
 
+function* addBonus(bonus) {
+  try {
+    yield put(actions.AddBonusSuccess(bonus));
+  } catch (error) {
+    yield put(actions.AddBonusFailure(error));
+  }
+}
+
 export default function* (){
   yield all([
     yield takeLatest(constants.GET_BONUS_LIST, getBonus),
+    yield takeLatest(constants.ADD_BONUS, addBonus),
   ]);
 }
