@@ -14,17 +14,17 @@ export const getBonusListFailure = (payload) => ({
   payload,
 });
 
-export const AddBonus = (payload) => ({
+export const addBonus = (payload) => ({
   type: constants.ADD_BONUS,
   payload,
 });
 
-export const AddBonusSuccess = (payload) => ({
+export const addBonusSuccess = (payload) => ({
   type: constants.ADD_BONUS_SUCCESS,
   payload,
 });
 
-export const AddBonusFailure = (payload) => ({
+export const addBonusFailure = (payload) => ({
   type: constants.ADD_BONUS_FAILURE,
   payload,
 });

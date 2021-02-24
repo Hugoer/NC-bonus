@@ -1,10 +1,12 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,useState} from 'react';
 import PropTypes from 'prop-types';
 import { Bonus } from './Bonus';
 import bonusListStyles from './bonuslist.module.css';
 import BonusAdd from './BonusAdd';
+import { HashtagContextProvider } from "../../../context/hashtag/HashtagContext";
+
 function BonusList({ getBonusList, bonusList}) {
-  const [items, setItems] = React.useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(()=> {
     getBonusList();
@@ -19,12 +21,12 @@ function BonusList({ getBonusList, bonusList}) {
   }, [bonusList]);
 
   return (
-    <>
+    <HashtagContextProvider>
       <BonusAdd/>
       <div className={bonusListStyles.bonuslist}>
         {items}
       </div>
-    </>
+    </HashtagContextProvider>
   );
 
 }

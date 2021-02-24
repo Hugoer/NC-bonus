@@ -4,7 +4,7 @@ import { bonusListSelector } from "./meta/selectors";
 import { getBonusList } from './meta/actions';
 
 const matStateToProps = state => ({
-  bonusList: bonusListSelector(state)
+  bonusList: bonusListSelector(state),
 });
 
 const mapDispatchToProps = ({

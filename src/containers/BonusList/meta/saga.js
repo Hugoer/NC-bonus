@@ -1,4 +1,4 @@
-import { all, takeLatest, put, call } from 'redux-saga/effects';
+import { all, takeLatest, put } from 'redux-saga/effects';
 import * as constants from "./constants";
 import * as actions from "./actions";
 import { default as bonusList } from '../../../data/bonus.json';
@@ -13,9 +13,9 @@ function* getBonus() {
 
 function* addBonus(bonus) {
   try {
-    yield put(actions.AddBonusSuccess(bonus));
+    yield put(actions.addBonusSuccess(bonus));
   } catch (error) {
-    yield put(actions.AddBonusFailure(error));
+    yield put(actions.addBonusFailure(error));
   }
 }
 
