@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Bonus } from './Bonus';
 import bonusListStyles from './bonuslist.module.css';
 import BonusAdd from './BonusAdd';
-import { HashtagContextProvider } from "../../../context/hashtag/HashtagContext";
-
 function BonusList({ getBonusList, bonusList}) {
   const [items, setItems] = useState([]);
 
@@ -21,12 +19,12 @@ function BonusList({ getBonusList, bonusList}) {
   }, [bonusList]);
 
   return (
-    <HashtagContextProvider>
+    <>
       <BonusAdd/>
       <div className={bonusListStyles.bonuslist}>
         {items}
       </div>
-    </HashtagContextProvider>
+    </>
   );
 
 }

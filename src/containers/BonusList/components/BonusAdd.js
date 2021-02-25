@@ -1,13 +1,11 @@
-import { useState } from 'react';
-import { useHashtagState, useHashtagDispatch } from '../../../context/hashtag/HashtagContext';
+import { useEffect, useState } from 'react';
+import { useHashtagState } from '../../../context/hashtag/HashtagContext';
 import styles from './bonusadd.module.css';
 
 function BonusAdd(){
   
   const { hasthtagsList } = useHashtagState();
-  const dispatch = useHashtagDispatch();
-
-  console.log(hasthtagsList);
+  
   const initialBonus = {
     description: '',
     amount: 0,
@@ -15,10 +13,14 @@ function BonusAdd(){
   };
   
   const [bonus, setBonus]  = useState(initialBonus);
-  
-  const list = hasthtagsList?.map((item)=>{
-    return (<option value={item}>item</option>);
-  });
+  const [list, setList] = useState()
+
+  useEffect(()=>{
+    const hashtags = Object.keys(hasthtagsList).map((item)=>{
+      return (<option value={item}>{hasthtagsList[item]}</option>);
+    });
+    setList(hashtags);
+  }, [hasthtagsList]);
 
   const set = (name) => {
     return ({ target: { value } }) => {
@@ -37,13 +39,6 @@ function BonusAdd(){
     }
   }
 
-  const addHashtag = () =>{
-    dispatch({
-      type: 'GET_HASHTAGS_LIST_SUCCESS',
-      payload: [1,2,3]
-    });
-  };
-
   return (
     <>
       <form onSubmit={onSubmit}>
@@ -59,9 +54,9 @@ function BonusAdd(){
         <label>Color*:</label>
         <select>
           <option value="">Select color</option>
-          {list}
+          { list }
         </select>
-        <button type="button" onClick={addHashtag}>Add hashtag</button>
+
         <input type="submit" value="Submit" />
 
       </form>
