@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Bonus } from './Bonus';
 import bonusListStyles from './bonuslist.module.css';
 import BonusAdd from './BonusAdd';
-function BonusList({ getBonusList, bonusList}) {
+function BonusList({ getBonusList, bonusList, addBonus}) {
   const [items, setItems] = useState([]);
 
   useEffect(()=> {
@@ -20,7 +20,7 @@ function BonusList({ getBonusList, bonusList}) {
 
   return (
     <>
-      <BonusAdd/>
+      <BonusAdd addBonus={addBonus}/>
       <div className={bonusListStyles.bonuslist}>
         {items}
       </div>
@@ -32,6 +32,7 @@ function BonusList({ getBonusList, bonusList}) {
 BonusList.propTypes = {
   getBonusList: PropTypes.func,
   bonusList: PropTypes.array,
+  addBonus: PropTypes.func,
 };
 
 export default BonusList;

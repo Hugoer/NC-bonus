@@ -39,7 +39,7 @@ const BonusList = (state = initialState, action) =>
         draft.bonusAddFailure = false;
         break;
       case constants.ADD_BONUS_SUCCESS:
-        draft.bonusList = [...draft.bonusList, action.payload];
+        draft.bonusList = [action.payload, ...state.bonusList];
         draft.bonusAddLoading = false;
         draft.bonusAddLoaded = true;
         draft.bonusAddFailure = false;

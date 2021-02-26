@@ -13,7 +13,7 @@ function* getBonus() {
 
 function* addBonus(bonus) {
   try {
-    yield put(actions.addBonusSuccess(bonus));
+    yield put(actions.addBonusSuccess(bonus.payload));
   } catch (error) {
     yield put(actions.addBonusFailure(error));
   }

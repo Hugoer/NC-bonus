@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import BonusList from "./components/BonusList";
 import { bonusListSelector } from "./meta/selectors";
-import { getBonusList } from './meta/actions';
+import { getBonusList, addBonus } from './meta/actions';
 
 const matStateToProps = state => ({
   bonusList: bonusListSelector(state),
@@ -9,6 +9,7 @@ const matStateToProps = state => ({
 
 const mapDispatchToProps = ({
   getBonusList,
+  addBonus,
 });
 
 const BonusListContainer = connect(
